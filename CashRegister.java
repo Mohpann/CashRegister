@@ -58,40 +58,6 @@ public class CashRegister extends Currency
   } 
 
 
-/*
-checks if input string has any non-number characters in it
-currently counts decimal points as non-number characters
-*/
-
-/*
-  public Boolean isNumber(String str)
-  {
-    char decimal = '.';
-    int counter = 0;
-    for (int i = 0; i < str.length(); i++)
-    {
-
-      if (str.length() == 0 || str == null)
-        return false;
-
-        for (char c : str.toCharArray()) 
-        {
-          if (!(Character.isDigit(c))) //check if char at index is a digit
-          {
-              if (c == decimal) //check if char at index is a decimal
-                counter++;
-                if(counter > 1)
-                  return false;
-              else if (!(c == decimal))
-                return false;
-          }
-      }
-    }
-    return true;
-  }
-
-  */
-
   public Boolean isNumber(String str)
   {
     char decimal = '.';
@@ -122,9 +88,6 @@ currently counts decimal points as non-number characters
       getAmountPaid();
     changeValue = totalPaid - totalDue;
   }
-//returns a string that has the quantities and denominations of the currencies returned
-//ArrayList of Currencies is already sorted largest to smallest with index[0] being the largest
-//find way to prevent case where customer underpays**
 
   public void getChange()
   {
